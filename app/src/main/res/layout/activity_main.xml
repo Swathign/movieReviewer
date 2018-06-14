@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnWidth="150dp"
+        android:numColumns="2"
+        android:background="#FFFFFF"
+        android:stretchMode="spacingWidthUniform"/>
+
+    <LinearLayout
+        android:id="@+id/no_internet"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/no_internet_connection"
+            android:layout_weight="1"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Oops !!! No Internet Connection. Please connect to internet and tep try again"/>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/try_again"
+            android:layout_height="wrap_content"
+            android:text="TRY AGAIN"
+            android:onClick="startFuntionParam"
+            android:background="@color/colorAccent"
+            android:layout_gravity="bottom"/>
+
+    </LinearLayout>
+
+    <RelativeLayout android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:id="@+id/progress_bar"
+        android:visibility="gone">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.80"
+            android:background="#000000"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:progressBackgroundTint="#000000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fetching..."
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
